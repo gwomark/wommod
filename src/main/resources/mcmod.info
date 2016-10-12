@@ -1,0 +1,13 @@
+[{
+    "modid": "wommod",
+    "name": "Wom Mod",
+    "description": "yurt and yurt for now",
+    "version": "1.0",
+    "mcversion": "1.10.2",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["Flabby"],
+    "logoFile": "",
+    "requiredMods": ["Forge"],
+    "useDependencyInformation": true
+}]

@@ -1,6 +1,8 @@
 package com.gwomark.wommod;
 
+import com.gwomark.wommod.proxy.IProxy;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -12,8 +14,11 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid="wommod", name="Wom Mod", version="1.10.2-1.0")
 public class WomMod
 {
-    @Mod.instance("wommod")
+    @Mod.Instance("wommod")
     public static WomMod instance;
+
+    @SidedProxy(clientSide = "com.gwomark.wommod.proxy.ClientProxy", serverSide = "com.gwomark.wommod.proxy.ServerProxy")
+    public static IProxy proxy;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -28,7 +33,7 @@ public class WomMod
     }
 
     @Mod.EventHandler
-    public voide postInit(FMLPostInitializationEvent event)
+    public void postInit(FMLPostInitializationEvent event)
     {
 
     }
